@@ -41,6 +41,7 @@ body{
     height: 100px;
     position: relative;
     top: 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-nav{
@@ -71,7 +72,7 @@ body{
 
 .section-principal-escrito{
     display: flex;
-    gap: 24px;
+    gap: 12px;
     flex-direction: column;
     align-content: center;
 }
@@ -80,6 +81,12 @@ body{
     display: flex;
     width: 200px;
     flex-direction: column;
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+.section-principal-imagem:hover, .section-principal-imagem:focus{
+    transform: scale(1.2)
 }
 
 .creditos{
@@ -99,7 +106,7 @@ body{
 .section-principal-escrito-subtitulo{
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
-    font-size: 24px;
+    font-size: 12px;
     color:white;
 }
 
@@ -115,16 +122,13 @@ body{
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
+    transition: 1s;
 }
 
-.section-principal-escrito-botao:hover{
-    animation: botao 1s linear forwards alternate-reverse;
-}
+.section-principal-escrito-botao:hover, .section-principal-escrito-botao:focus{
+    background-color: #532A59;
+    color: white;
 
-@keyframes botao{
-    0% {background-color: #d19cd0;}
-    100% {background-color: #532A59;}
-        
 }
 
 .section-secundario{
